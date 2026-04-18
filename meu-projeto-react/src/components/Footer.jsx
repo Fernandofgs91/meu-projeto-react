@@ -1,15 +1,17 @@
-// src/components/Footer.jsx
+import { REPO_URL } from '../config/site'
+import './Footer.css'
+
 function Footer() {
   return (
-    <footer style={{
-      background: "#222",
-      color: "#fff",
-      textAlign: "center",
-      padding: "10px"
-    }}>
-      <p>© 2026 - Todos os direitos reservados</p>
+    <footer className="site-footer">
+      <div className="site-footer__inner">
+        <p className="site-footer__copy">© {new Date().getFullYear()} — Projeto de estudos em React.</p>
+        <a className="site-footer__link" href={REPO_URL} rel="noreferrer noopener" target="_blank">
+          Ver repositório
+        </a>
+      </div>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

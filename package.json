@@ -1,4 +1,11 @@
 {
+  "name": "meu-projeto-react-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --prefix meu-projeto-react",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d meu-projeto-react/dist"
+  },
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
